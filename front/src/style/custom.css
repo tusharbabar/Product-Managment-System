@@ -1,0 +1,560 @@
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #ec4899;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+/* Home Section Wrappers */
+.home-wrapper {
+  overflow-x: hidden;
+}
+
+/* Hero Banner */
+.hero-banner-two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 50px 0;
+  padding: 40px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-subtitle {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.hero-text h1 {
+  font-size: 45px;
+  font-weight: 800;
+  margin: 15px 0;
+  line-height: 1.1;
+  color: #1e293b;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-image img:hover {
+  transform: scale(1.02) rotate(1deg);
+}
+
+/* Glassmorphism Card (Premium Compact) */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: var(--primary-color);
+}
+
+.glass-card .card-img-top {
+  height: 200px;
+  object-fit: contain;
+  padding: 20px;
+  background: #f8fafc;
+  transition: transform 0.5s ease;
+}
+
+.glass-card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.glass-card .card-body {
+  padding: 20px !important;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.glass-card .card-title {
+  font-size: 15px !important;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1e293b;
+  height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.glass-card .card-text {
+  font-size: 18px !important;
+  font-weight: 800;
+  margin-bottom: 15px !important;
+  color: #1e293b !important;
+}
+
+.glass-card .btn {
+  padding: 10px 20px !important;
+  font-size: 13px !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 8px !important;
+  transition: 0.3s;
+}
+
+/* Wishlist Button on Card */
+.wishlist-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  color: #94a3b8;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.wishlist-btn:hover {
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+/* Section Styling */
+.section-title {
+  font-weight: 800;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0f172a;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 12px auto;
+  border-radius: 2px;
+}
+
+/* Feature Box */
+.feature-box {
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+  height: 100%;
+  border: 1px solid #f1f5f9;
+}
+
+.feature-box:hover {
+  border-color: var(--primary-color);
+  background: #f8fafc;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: #eef2ff;
+  color: var(--primary-color);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 24px;
+}
+
+/* Stat Card */
+.stat-card {
+  padding: 30px;
+  background: #0f172a;
+  color: white;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  display: block;
+  background: linear-gradient(to right, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  margin: 10px;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 0;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 550px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Newsletter */
+.newsletter-section {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  border-radius: 30px;
+  padding: 60px;
+  color: white;
+  text-align: center;
+  margin: 80px 0;
+}
+
+.newsletter-input {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 400px;
+  margin-right: 10px;
+}
+
+/* Sale Banner Upgrade */
+.sale-banner {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(to right, #0ea5e9, #2dd4bf);
+  color: white;
+  border-radius: 30px;
+}
+
+.sale-content h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* Footer Modern Redesign */
+.footer {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 80px 0 40px;
+  border-top: 4px solid var(--primary-color);
+}
+
+.footer-brand {
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+}
+
+.footer-section h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--secondary-color);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.footer-section ul li a:hover {
+  color: white;
+  transform: translateX(5px);
+  display: inline-block;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.social-circle {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.social-circle:hover {
+  background: var(--primary-color);
+  transform: translateY(-5px);
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 60px;
+  padding-top: 30px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .hero-banner-two {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive Adjustments (Mobile Friendly) */
+@media (max-width: 991px) {
+  .hero-banner-two {
+    padding: 30px;
+    margin: 30px 0;
+  }
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .about-section {
+    gap: 30px;
+    padding: 50px 0;
+  }
+  .about-text h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-banner-two {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+  }
+  .hero-text h1 {
+    font-size: 28px;
+  }
+  .hero-text p {
+    font-size: 16px;
+  }
+  .hero-image img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .d-flex.gap-3 {
+    justify-content: center;
+  }
+  .feature-box {
+    padding: 20px;
+  }
+  .stat-card {
+    padding: 20px;
+  }
+  .stat-number {
+    font-size: 28px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .footer-contact p {
+    justify-content: center;
+  }
+  .footer-contact .d-flex {
+    justify-content: center;
+  }
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-image img {
+    height: auto;
+    max-height: 300px;
+  }
+  .newsletter-section {
+    padding: 40px 20px;
+    margin: 40px 0;
+  }
+  .newsletter-section h2 {
+    font-size: 24px;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 24px;
+  }
+  .glass-card .card-img-top {
+    height: 150px;
+  }
+  .glass-card .card-body {
+    padding: 15px !important;
+  }
+  .glass-card .card-text {
+    font-size: 16px !important;
+  }
+}
